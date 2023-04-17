@@ -11,8 +11,11 @@
 
 <body>
 	<div class="app start-invisible">
+
+		<a th:href="@{/logout}" class="link d-flex justify-content-center">Logout</a>
 		<a id="btn-new-contact" th:href="@{/person/form}" class="btn btn-success active mt-3">New Contact</a>
-		<a th:href="@{/person/deleted}" class="deleted-return-link">Deleted</a>
+		<a th:href="@{/person/deleted}" class="link d-flex justify-content-end">Deleted</a>
+
 		<hr>
 
 		<div class="container col-6 ">

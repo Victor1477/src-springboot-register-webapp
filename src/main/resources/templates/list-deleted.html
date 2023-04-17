@@ -11,10 +11,14 @@
 
 <body>
     <div class="app start-invisible">
-        <a th:href="@{/person/list}" class="deleted-return-link">Return Home List</a>
+
+        <a th:href="@{/logout}" class="link d-flex justify-content-center">Logout</a>
+        <a th:href="@{/person/list}" class="link d-flex justify-content-end">Deleted</a>
+
+        <hr>
 
         <div class="container col-6 mt-5">
-            <input class="search-contact form-control mb-3" placeholder="Search Name">
+            <input class="search-contact form-control mt-4 mb-4" placeholder="Search Name">
         </div>
         </form>
 
@@ -32,10 +36,13 @@
                 <tr class="text-center tr-pessoa" th:each="person : ${people}">
                     <td class="td-nome" th:text="${person.value.nome}" />
                     <td th:text="${person.value.contato}" />
-                    <td><a target="_blank" th:href="${person.value.linkFacebook}" th:text="${person.value.linkFacebook}" /></td>
-                    <td><a target="_blank" th:href="${person.value.linkInstagram}" th:text="${person.value.linkInstagram}" /></td>
+                    <td><a target="_blank" th:href="${person.value.linkFacebook}"
+                            th:text="${person.value.linkFacebook}" /></td>
+                    <td><a target="_blank" th:href="${person.value.linkInstagram}"
+                            th:text="${person.value.linkInstagram}" /></td>
                     <td class="td-data-nascimento" th:text="${person.value.dataNascimento}" />
-                    <td><a id="delete-button" class="btn btn-info mb-2" th:href="@{/person/restore(personId=${person.value.id})}">Restore</a>
+                    <td><a id="delete-button" class="btn btn-info mb-2"
+                            th:href="@{/person/restore(personId=${person.value.id})}">Restore</a>
                     </td>
                 </tr>
             </tbody>
@@ -44,7 +51,7 @@
 
     <script th:src="@{/js/ClosePageAnimation.js}"></script>
     <script th:src="@{/js/ListAll.js}"></script>
-    
+
 </body>
 
 </html>
