@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <title>Deleted List</title>
+</head>
+
+<body>
+    <div class="app start-invisible">
+        <a th:href="@{/person/list}" class="deleted-return-link">Return Home List</a>
+
+        <div class="container col-6 mt-5">
+            <input class="search-contact form-control mb-3" placeholder="Search Name">
+        </div>
+        </form>
+
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <th>Nome</th>
+                <th>Contato</th>
+                <th>Facebook</th>
+                <th>Instagram</th>
+                <th>Data De Nascimento</th>
+                <th>Actions</th>
+            </thead>
+
+            <tbody>
+                <tr class="text-center tr-pessoa" th:each="person : ${people}">
+                    <td class="td-nome" th:text="${person.value.nome}" />
+                    <td th:text="${person.value.contato}" />
+                    <td><a target="_blank" th:href="${person.value.linkFacebook}" th:text="${person.value.linkFacebook}" /></td>
+                    <td><a target="_blank" th:href="${person.value.linkInstagram}" th:text="${person.value.linkInstagram}" /></td>
+                    <td class="td-data-nascimento" th:text="${person.value.dataNascimento}" />
+                    <td><a id="delete-button" class="btn btn-info mb-2" th:href="@{/person/restore(personId=${person.value.id})}">Restore</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script th:src="@{/js/ClosePageAnimation.js}"></script>
+    <script th:src="@{/js/ListAll.js}"></script>
+    
+</body>
+
+</html>
