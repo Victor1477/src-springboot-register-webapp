@@ -8,13 +8,13 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-public class ConsoleOutputStream extends OutputStream {
+public class JFrameConsoleOutputStream extends OutputStream {
 
     private JFrame frame;
     private JTextArea textArea;
     private JScrollPane jScrollPane;
 
-    public ConsoleOutputStream() {
+    public JFrameConsoleOutputStream() {
         this.frame = new JFrame("WebApp");
 
         this.textArea = new JTextArea();
