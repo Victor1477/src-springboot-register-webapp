@@ -20,7 +20,7 @@ public class ConsoleOutputStream extends OutputStream {
         this.textArea = new JTextArea();
         textArea.setBackground(Color.BLACK);
         textArea.setForeground(Color.GREEN);
-        textArea.setFont(new Font("ROMAN_BASELINE", 0, 14));
+        textArea.setFont(new Font(Font.MONOSPACED, 0, 12));
 
         this.jScrollPane = new JScrollPane(this.textArea);
 
