@@ -1,11 +1,5 @@
 var people = document.querySelectorAll(".tr-pessoa");
-var inputText = document.querySelector(".search-contact");
-const app = document.querySelector(".app");
-
-setInterval(() => {
-    app.classList.remove("start-invisible")
-    app.classList.add("load-page")
-}, 100)
+var inputText = document.querySelector(".search-contact-input");
 
 //Formatação da exibição da data de nascimento
 for (let i = 0; i < people.length; i++) {
@@ -54,8 +48,10 @@ people.forEach(person => {
     })
 })
 
-//Animação de mudança de tela
-const deletedOrReturnHomeLink = document.querySelector(".deleted-return-link");
-const newContactButton = document.querySelector("#btn-new-contact");
-changeScreenAnimation(app, deletedOrReturnHomeLink);
-changeScreenAnimation(app, newContactButton);
+const socialMediasBtn = document.querySelectorAll(".btn-social-media");
+
+//Oculta botões de rede social caso não tenha link
+socialMediasBtn.forEach((btn) => {
+    if (btn.getAttribute('href') == '')
+        btn.classList.add("invisible")
+})
