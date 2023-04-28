@@ -1,11 +1,5 @@
 //Formatação do contato
-let contato = document.querySelector(".contato");
-const app = document.querySelector(".app");
-
-setInterval(() => {
-    app.classList.remove("start-invisible")
-    app.classList.add("load-page")
-}, 100)
+const contato = document.querySelector(".contato");
 
 contato.addEventListener("focusout", function () {
     let textoContato = contato.value;
@@ -44,8 +38,8 @@ contato.addEventListener("focusout", function () {
 });
 
 //Formatação da data de nascimento 
-let dataNascimento = document.querySelector(".data-nascimento");
-let form = document.querySelector("form");
+const dataNascimento = document.querySelector(".data-nascimento");
+const form = document.querySelector("form");
 
 dataNascimento.addEventListener("focusout", function () {
 
@@ -64,14 +58,16 @@ dataNascimento.addEventListener("focusout", function () {
     }
 });
 
-form.addEventListener("submit", function () {
+form.addEventListener("submit", function (e) {
+    const nome = document.querySelector(".nome");
+
+    if (nome.value == "") {
+        alert('O Nome não pode estar vazio.')
+        e.preventDefault();
+    }
+
     if (dataNascimento.value.length > 0 && dataNascimento.value.length == 10) {
         let dataNascimentoSplitted = dataNascimento.value.split("/");
         dataNascimento.value = `${dataNascimentoSplitted[2]}-${dataNascimentoSplitted[1]}-${dataNascimentoSplitted[0]}`;
     }
 });
-
-//Animação de mudança de tela
-const returnHomeLink = document.querySelector("#return-home-link");
-const saveButton = document.querySelector("#btn-save");
-changeScreenAnimation(app, returnHomeLink);

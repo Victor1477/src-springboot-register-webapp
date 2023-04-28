@@ -4,35 +4,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
-	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/form.css}">
 	<title>Form</title>
 </head>
 
-<body class="container">
-	<div class="app start-invisible">
-		<h2 class="mt-3">Save Contact</h2>
+<body>
+	<div class="app">
+		<h2>Save Contact</h2>
 		<hr>
 
 		<form th:action="@{/person/save}" th:object="${person}" method="post">
-			<div class="col-6">
+			<div class="inputs">
 				<input type="hidden" th:field="*{id}">
-				<input class="form-control mb-4" th:field="*{nome}" placeholder="Nome">
-				<input class="form-control mb-4 contato" th:field="*{contato}" placeholder="Contato">
-				<input class="form-control mb-4" th:field="*{linkFacebook}" placeholder="Facebook">
-				<input class="form-control mb-4" th:field="*{linkInstagram}" placeholder="Instagram">
-				<input class="form-control mb-4 data-nascimento" th:field="*{dataNascimento}"
-					placeholder="Data De Nascimento">
+				<input class="nome" th:field="*{nome}" placeholder="Nome">
+				<input class="contato" th:field="*{contato}" placeholder="Contato">
+				<input th:field="*{linkFacebook}" placeholder="Facebook">
+				<input th:field="*{linkInstagram}" placeholder="Instagram">
+				<input class="data-nascimento" th:field="*{dataNascimento}" placeholder="Data De Nascimento">
 
-				<input id="btn-save" class="btn btn-success" type="submit" value="Save">
+				<input class="submit-button" type="submit" value="Save">
 			</div>
 		</form>
 		<hr>
 
-		<a id="return-home-link" class="mt-3" th:href="@{/person/list}">Back to Home List</a>
+		<a class="return-link" th:href="@{/person/list}">Return Home List</a>
 	</div>
 
-	<script th:src="@{/js/ClosePageAnimation.js}"></script>
 	<script th:src="@{/js/Form.js}"></script>
 
 </body>
