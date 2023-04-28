@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(40, 40, 40);
-    color: white;
+    background-color: var(--background-color);
+    color: var(--primary-color);
 }
 
 h2 {
@@ -9,9 +9,9 @@ h2 {
 
 input {
     width: 40%;
-    background-color: rgb(50, 50, 50);
-    color: white;
-    border: 1px solid white;
+    background-color: var(--input-background-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     padding: 8px;
     border-radius: 10px;
     font-size: 16px;
@@ -19,7 +19,7 @@ input {
 }
 
 input::placeholder {
-    color: white;
+    color: var(--primary-color);
 }
 
 .inputs {
@@ -48,7 +48,7 @@ input::placeholder {
     display: block;
     margin: 20px;
     font-size: 18px;
-    color: white;
+    color: var(--primary-color);
 }
 
 .return-link:hover {
