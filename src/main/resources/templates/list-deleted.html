@@ -28,8 +28,7 @@
             <thead>
                 <th>Nome</th>
                 <th>Contato</th>
-                <th>Facebook</th>
-                <th>Instagram</th>
+                <th>Redes Sociais</th>
                 <th>Data De Nascimento</th>
                 <th>Actions</th>
             </thead>
@@ -38,10 +37,13 @@
                 <tr class="tr-pessoa" th:each="person : ${people}">
                     <td class="td-nome" th:text="${person.value.nome}" />
                     <td th:text="${person.value.contato}" />
-                    <td><a class="btn btn-social-media" target="_blank" th:href="${person.value.linkFacebook}"
-                            th:text="Facebook" /></td>
-                    <td><a class="btn btn-social-media" target="_blank" th:href="${person.value.linkInstagram}"
-                            th:text="Instagram" /></td>
+                    <td>
+                        <div class="social__media__links"><a class="btn btn-social-media" target="_blank"
+                                th:href="${person.value.linkFacebook}" th:text="Facebook" />
+                            <a class="btn btn-social-media" target="_blank" th:href="${person.value.linkInstagram}"
+                                th:text="Instagram" />
+                        </div>
+                    </td>
                     <td class="td-data-nascimento" th:text="${person.value.dataNascimento}" />
                     <td>
                         <div class="btn-actions"><a class="btn btn-restore"

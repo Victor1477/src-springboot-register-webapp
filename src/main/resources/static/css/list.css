@@ -68,10 +68,28 @@ td {
     border: var(--table-borders);
 }
 
+.social__media__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
 .btn-actions {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 10px
+}
+
+@media (max-width: 1350px) {
+    .social__media__links {
+        flex-direction: column;
+    }
+
+    .btn-actions {
+        flex-direction: column;
+    }
 }
 
 .btn-update {
