@@ -4,6 +4,7 @@
 }
 
 body {
+    min-width: 1000px;
     background-color: var(--background-color);
     color: var(--primary-color);
 }
