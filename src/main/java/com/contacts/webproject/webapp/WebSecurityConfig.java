@@ -18,7 +18,7 @@ public class WebSecurityConfig {
 	public UserDetailsService userDetailsService() {
 		UserDetails user = User.builder()
 				.username("victor")
-				.password("{bcrypt}$2a$13$qDELBBv8OdAwGwB7XFVYKOIL1spmPN7hGRQrZ5w5d9psFrUlFvcDa")
+				.password("{bcrypt}$2a$13$rzhIFolep81wwpuhtl/FtudHZwIFd4xSWQun/2TM8ZhNsanKczfSC")
 				.roles("USER")
 				.build();
 
