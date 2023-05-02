@@ -71,6 +71,7 @@ td {
 .social__media__links {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     gap: 10px;
 }
@@ -78,6 +79,7 @@ td {
 .btn-actions {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     gap: 10px
 }
