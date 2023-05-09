@@ -1,8 +1,7 @@
 body {
-    min-width: 1000px;
+    min-width: fit-content;
     background-color: var(--background-color);
     color: var(--primary-color);
-    min-width: fit-content;
 }
 
 h2 {
@@ -10,6 +9,7 @@ h2 {
 }
 
 input {
+    min-width: 250px;
     width: 40%;
     background-color: var(--input-background-color);
     color: var(--primary-color);

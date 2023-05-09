@@ -4,10 +4,9 @@
 }
 
 body {
-    min-width: 1000px;
+    min-width: fit-content;
     background-color: var(--background-color);
     color: var(--primary-color);
-    min-width: fit-content;
 }
 
 .app {
