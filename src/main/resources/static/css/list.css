@@ -1,74 +1,63 @@
-:root {
-    --table-borders: 1px solid white;
-    --table-cells-padding: 20px;
-}
-
 body {
-    min-width: fit-content;
-    background-color: var(--background-color);
-    color: var(--primary-color);
+    min-width: 920px;
+    background-color: rgb(30, 30, 30);
 }
 
 .app {
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 }
 
 header {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px;
-}
-
-.btn {
-    text-decoration: none;
-    border: 1px solid;
-    padding: 10px 15px;
-    border-radius: 8px;
-    color: var(--primary-color);
-}
-
-.search-contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin: 20px 10px;
 }
 
 .search-contact-input {
-    text-align: center;
-    background-color: var(--input-background-color);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    padding: 8px;
+    border: 0;
+    border-radius: 15px;
+    height: 26px;
     width: 50%;
-    border-radius: 10px;
-    margin: 20px;
-    font-size: 18px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    text-align: center;
+    margin: 20px 0 30px 0;
+    height: 30px;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
 .search-contact-input::placeholder {
-    color: var(--primary-color);
+    color: white;
 }
 
 table {
-    width: 100%;
-    font-size: 18px;
-    text-align: center;
-    border: var(--table-borders);
-    border-collapse: collapse;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    font-size: 20px;
+    min-width: 95%;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 8px rgb(255, 255, 255);
 }
 
 th {
-    padding: var(--table-cells-padding);
-    border: var(--table-borders);
+    font-size: 22px;
+    padding-bottom: 20px;
 }
 
 td {
-    padding: var(--table-cells-padding);
-    border: var(--table-borders);
+    text-align: center;
+    box-shadow: 0 0 5px white;
+    padding: 10px;
 }
 
-.social__media__links {
+.buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,64 +65,64 @@ td {
     gap: 10px;
 }
 
-.btn-actions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px
-}
-
-@media (max-width: 1350px) {
-    .social__media__links {
-        flex-direction: column;
-    }
-
-    .btn-actions {
-        flex-direction: column;
-    }
-}
-
-.btn-update {
-    background-color: rgb(0, 200, 0);
+.btn {
     color: black;
-}
-
-.btn-update:hover {
-    background-color: rgb(0, 255, 0);
-}
-
-.btn-delete {
-    background-color: rgb(200, 0, 0);
-    color: black;
-}
-
-.btn-delete:hover {
-    background-color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 0;
 }
 
 .btn-new-contact {
-    background-color: rgb(0, 200, 0);
-    font-size: 18px;
-    color: black;
+    padding: 12px;
+    margin-left: 30px;
 }
 
-.btn-new-contact:hover {
-    background-color: rgb(0, 255, 0);
+.btn-logout {
+    padding: 12px 15px;
+    color: blue;
+    background-color: white;
 }
 
 .btn-logout:hover {
-    background-color: rgb(60, 60, 60);
+    padding: 12px;
+    color: white;
+    background-color: blue;
 }
 
-.btn-deleted-list:hover {
-    background-color: rgb(60, 60, 60);
+.btn-deleted-list {
+    padding: 12px;
 }
 
-.btn-restore {
-    background-color: rgb(0, 0, 200)
+.btn-restore {}
+
+.btn-social-media {
+    background-color: rgb(255, 255, 255);
 }
 
-.btn-restore:hover {
-    background-color: rgb(0, 0, 255)
+.green {
+    background-color: rgb(0, 200, 100);
+}
+
+.green:hover {
+    background-color: rgb(0, 255, 100);
+}
+
+.red {
+    background-color: rgb(200, 50, 50);
+}
+
+.red:hover {
+    background-color: rgb(255, 50, 50);
+}
+
+.blue {
+
+    background-color: rgb(0, 180, 200);
+}
+
+.blue:hover {
+    background-color: rgb(0, 180, 255);
 }

@@ -10,12 +10,15 @@
 </head>
 
 <body>
+	<header>
+		<a class="return-link" th:href="@{/person/list}">Return Home</a>
+	</header>
+
 	<div class="app">
-		<h2>Save Contact</h2>
-		<hr>
+		<h3>Save Contact</h3>
 
 		<form th:action="@{/person/save}" th:object="${person}" method="post">
-			<div class="inputs">
+			<div class="form">
 				<input type="hidden" th:field="*{id}">
 				<input class="nome" th:field="*{nome}" placeholder="Nome">
 				<input class="contato" th:field="*{contato}" placeholder="Contato">
@@ -26,9 +29,6 @@
 				<input class="submit-button" type="submit" value="Save">
 			</div>
 		</form>
-		<hr>
-
-		<a class="return-link" th:href="@{/person/list}">Return Home List</a>
 	</div>
 
 	<script th:src="@{/js/Form.js}"></script>

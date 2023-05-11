@@ -13,17 +13,14 @@
 
 	<div class="app">
 		<header>
-			<a th:href="@{/person/form}" class="btn btn-new-contact">New Contact</a>
+			<a th:href="@{/person/form}" class="btn btn-new-contact green">New Contact</a>
 			<a th:href="@{/logout}" class="btn btn-logout">Logout</a>
-			<a th:href="@{/person/deleted}" class="btn btn-deleted-list">Deleted List</a>
+			<a th:href="@{/person/deleted}" class="btn btn-deleted-list blue">Deleted List</a>
 		</header>
-		<hr class="hr">
 
-		<div class="search-contact">
-			<input class="search-contact-input" placeholder="Search Name">
-		</div>
+		<input class="search-contact-input" placeholder="Search Name">
+
 		</form>
-
 		<table>
 			<thead>
 				<th>Nome</th>
@@ -38,7 +35,7 @@
 					<td class="td-nome" th:text="${person.nome}" />
 					<td th:text="${person.contato}" />
 					<td>
-						<div class="social__media__links"><a class="btn btn-social-media" target="_blank"
+						<div class="buttons"><a class="btn btn-social-media" target="_blank"
 								th:href="${person.linkFacebook}" th:text="Facebook" />
 							<a class="btn btn-social-media" target="_blank" th:href="${person.linkInstagram}"
 								th:text="Instagram" />
@@ -46,10 +43,10 @@
 					</td>
 					<td class="td-data-nascimento" th:text="${person.dataNascimento}" />
 					<td>
-						<div class="btn-actions"><a class="btn btn-update"
-								th:href="@{/person/updateForm(personId=${person.id})}" th:text="Update" />
-							<a id="delete-button" class="btn btn-delete"
-								th:href="@{/person/delete(personId=${person.id})}" th:text="Delete" />
+						<div class="buttons"><a class="btn green" th:href="@{/person/updateForm(personId=${person.id})}"
+								th:text="Update" />
+							<a id="delete-button" class="btn red" th:href="@{/person/delete(personId=${person.id})}"
+								th:text="Delete" />
 						</div>
 					</td>
 				</tr>

@@ -13,15 +13,12 @@
 
     <div class="app">
         <header>
-            <a th:href="@{/person/form}" class="btn btn-new-contact">New Contact</a>
+            <a th:href="@{/person/form}" class="btn btn-new-contact green">New Contact</a>
             <a th:href="@{/logout}" class="btn btn-logout">Logout</a>
-            <a th:href="@{/person/list}" class="btn btn-deleted-list">Return Home List</a>
+            <a th:href="@{/person/list}" class="btn btn-deleted-list blue">Return Home</a>
         </header>
-        <hr class="hr">
 
-        <div class="search-contact">
-            <input class="search-contact-input" placeholder="Search Name">
-        </div>
+        <input class="search-contact-input" placeholder="Search Name">
         </form>
 
         <table>
@@ -38,7 +35,7 @@
                     <td class="td-nome" th:text="${person.value.nome}" />
                     <td th:text="${person.value.contato}" />
                     <td>
-                        <div class="social__media__links"><a class="btn btn-social-media" target="_blank"
+                        <div class="buttons"><a class="btn btn-social-media" target="_blank"
                                 th:href="${person.value.linkFacebook}" th:text="Facebook" />
                             <a class="btn btn-social-media" target="_blank" th:href="${person.value.linkInstagram}"
                                 th:text="Instagram" />
@@ -46,7 +43,7 @@
                     </td>
                     <td class="td-data-nascimento" th:text="${person.value.dataNascimento}" />
                     <td>
-                        <div class="btn-actions"><a class="btn btn-restore"
+                        <div class="buttons"><a class="btn btn-restore blue"
                                 th:href="@{/person/restore(personId=${person.value.id})}">Restore</a>
                         </div>
                     </td>
