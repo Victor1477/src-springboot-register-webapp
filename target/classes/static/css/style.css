@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.invisible {
+    display: none;
+}
+
+.delete-person {
+    opacity: 0;
+    transition: 500ms;
+}
+
+footer {
+    color: rgb(0, 170, 255);
+    background-color: rgb(50, 50, 50);
+    font-size: 32px;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    position: relative;
+    margin-top: 700px;
+}

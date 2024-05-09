@@ -1,0 +1,7 @@
+com\contacts\webproject\webapp\JFrameConsoleOutputStream.class
+com\contacts\webproject\webapp\WebappApplication.class
+com\contacts\webproject\webapp\WebSecurityConfig.class
+com\contacts\webproject\webapp\controller\LoginController.class
+com\contacts\webproject\webapp\controller\PersonController.class
+com\contacts\webproject\webapp\dao\PersonDao.class
+com\contacts\webproject\webapp\entity\Person.class

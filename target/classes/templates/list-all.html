@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" data-bs-theme="dark">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/list.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+	<title>Home List</title>
+</head>
+
+<body>
+
+	<div class="app">
+		<header>
+			<a th:href="@{/person/form}" class="btn btn-new-contact green">New Contact</a>
+			<a th:href="@{/logout}" class="btn btn-logout">Logout</a>
+			<a th:href="@{/person/deleted}" class="btn btn-deleted-list blue">Deleted List</a>
+		</header>
+
+		<input class="search-contact-input" placeholder="Search Name">
+
+		</form>
+		<table>
+			<thead>
+				<th>Nome</th>
+				<th>Contato</th>
+				<th>Redes Sociais</th>
+				<th>Data De Nascimento</th>
+				<th>Actions</th>
+			</thead>
+
+			<tbody>
+				<tr class="tr-pessoa" th:each="person : ${people}">
+					<td class="td-nome" th:text="${person.nome}" />
+					<td th:text="${person.contato}" />
+					<td>
+						<div class="buttons"><a class="btn btn-social-media" target="_blank"
+								th:href="${person.linkFacebook}" th:text="Facebook" />
+							<a class="btn btn-social-media" target="_blank" th:href="${person.linkInstagram}"
+								th:text="Instagram" />
+						</div>
+					</td>
+					<td class="td-data-nascimento" th:text="${person.dataNascimento}" />
+					<td>
+						<div class="buttons"><a class="btn green" th:href="@{/person/updateForm(personId=${person.id})}"
+								th:text="Update" />
+							<a id="delete-button" class="btn red" th:href="@{/person/delete(personId=${person.id})}"
+								th:text="Delete" />
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<footer>Developed by Victor</footer>
+	<script th:src="@{/js/ListAll.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+body {
+    min-width: 920px;
+    background-color: rgb(30, 30, 30);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+
+.search-contact-input {
+    border: 0;
+    border-radius: 15px;
+    height: 26px;
+    width: 50%;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    text-align: center;
+    margin: 20px 0 30px 0;
+    height: 30px;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.search-contact-input::placeholder {
+    color: white;
+}
+
+table {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    font-size: 20px;
+    min-width: 95%;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 8px rgb(255, 255, 255);
+}
+
+th {
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+td {
+    text-align: center;
+    box-shadow: 0 0 5px white;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 0;
+}
+
+.btn-new-contact {
+    padding: 12px;
+    margin-left: 30px;
+}
+
+.btn-logout {
+    padding: 12px 15px;
+    color: blue;
+    background-color: white;
+}
+
+.btn-logout:hover {
+    padding: 12px;
+    color: white;
+    background-color: blue;
+}
+
+.btn-deleted-list {
+    padding: 12px;
+}
+
+.btn-restore {}
+
+.btn-social-media {
+    background-color: rgb(255, 255, 255);
+}
+
+.green {
+    background-color: rgb(0, 200, 100);
+}
+
+.green:hover {
+    background-color: rgb(0, 255, 100);
+}
+
+.red {
+    background-color: rgb(200, 50, 50);
+}
+
+.red:hover {
+    background-color: rgb(255, 50, 50);
+}
+
+.blue {
+
+    background-color: rgb(0, 180, 200);
+}
+
+.blue:hover {
+    background-color: rgb(0, 180, 255);
+}

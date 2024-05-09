@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WebappApplication {
 
 	public static void main(String[] args) {
-		System.setOut(new PrintStream(new JFrameConsoleOutputStream()));
+//		System.setOut(new PrintStream(new JFrameConsoleOutputStream()));
 		SpringApplication.run(WebappApplication.class, args);
 	}
 }

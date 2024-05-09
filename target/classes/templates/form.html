@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" data-bs-theme="dark">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/form.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+	<title>Form</title>
+</head>
+
+<body>
+	<header>
+		<a class="return-link" th:href="@{/person/list}">Return Home</a>
+	</header>
+
+	<div class="app">
+		<h3>Save Contact</h3>
+
+		<form th:action="@{/person/save}" th:object="${person}" method="post">
+			<div class="form">
+				<input type="hidden" th:field="*{id}">
+				<input class="nome" th:field="*{nome}" placeholder="Nome">
+				<input class="contato" th:field="*{contato}" placeholder="Contato">
+				<input th:field="*{linkFacebook}" placeholder="Facebook">
+				<input th:field="*{linkInstagram}" placeholder="Instagram">
+				<input class="data-nascimento" th:field="*{dataNascimento}" placeholder="Data De Nascimento">
+
+				<input class="submit-button" type="submit" value="Save">
+			</div>
+		</form>
+	</div>
+	<footer>Developed by Victor</footer>
+	<script th:src="@{/js/Form.js}"></script>
+</body>
+
+</html>
